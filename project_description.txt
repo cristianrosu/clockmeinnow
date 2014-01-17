@@ -1,0 +1,40 @@
+Recreate the Clock Me In Now application in Ruby On Rails instead of CakePHP.
+
+tables:
+  work (
+    id - primary key for work entries
+    user_id - user id for associating work with user
+    start - when the work was started
+    duration - number of seconds this work entry lasted
+    created_at - when the work  was created
+    updated_at - when the work was last updated
+  )
+
+  users (
+    id - primary key for the user entries
+    company_id - company id the user belongs to
+    active - boolean to show whether or not the user account is active
+    first_name - first name of the user
+    last_name - last name of the user
+    email - email address of the user
+    password - information used to verify the user's password when logging in
+  )
+
+  companies (
+    id - primary key for the companies entries
+    owner_id - user id of the user who owns the company
+    name - name of the company
+    address_line_1 - first address line for the company
+    address_line_2 - second address line for the company
+    city - city for the company
+    province - state / province for the company
+    postal - zip / postal code for the company
+    email - email to contact company about updates and changes
+  )
+
+  ip_filters (
+    id - primary key for the ip filters entries
+    company_id - company id of the company who uses the filter
+    filters - list of ips or ranges to filter logins from
+  )
+
