@@ -33,6 +33,8 @@ Clockmeinnow::Application.routes.draw do
   #     resource :seller
   #   end
 
+  resources :jobs
+
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments

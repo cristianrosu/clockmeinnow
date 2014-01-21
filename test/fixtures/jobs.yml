@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2014-01-20 10:35:58
+  duration: 1
+
+two:
+  start: 2014-01-20 10:35:58
+  duration: 1

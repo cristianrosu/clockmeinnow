@@ -1,0 +1,24 @@
+<h1>Listing jobs</h1>
+<%= link_to 'New Job', new_job_path %>
+
+<table>
+  <tr>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Duration</th>
+  </tr>
+
+  <% @jobs.each do |job| %>
+    <tr>
+      <td><%= job.start %></td>
+      <% if job.duration %>
+        <td><%= job.start + job.duration %></td>
+        <td><%= distance_of_time_in_words job.duration %></td>
+      <% else %>
+        <% currentTime = Time.now.utc %>
+        <td><%= currentTime %></td>
+        <td><%= distance_of_time_in_words job.start.time.in_time_zone, currentTime %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
