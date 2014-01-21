@@ -24,3 +24,4 @@ doc/
 .idea
 .secret
 project_description.txt
+database.yml
